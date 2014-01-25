@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PortalManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerCollisions.cs">
     <Files>
-      <File FileName="Assets/GameController.cs" Line="19" Column="14" />
-      <File FileName="Assets/Mover.cs" Line="1" Column="1" />
-      <File FileName="Assets/CleanupCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets/PlayerCollisions.cs" Line="11" Column="36" />
-      <File FileName="Assets/PortalManager.cs" Line="6" Column="2" />
-      <File FileName="Assets/Portal.cs" Line="9" Column="16" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="51" Column="5" />
+      <File FileName="Assets/Scripts/PortalManager.cs" Line="34" Column="4" />
+      <File FileName="Assets/Scripts/Portal.cs" Line="20" Column="3" />
+      <File FileName="Assets/Scripts/PlayerCollisions.cs" Line="15" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

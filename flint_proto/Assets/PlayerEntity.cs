@@ -1,24 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Portal : MonoBehaviour {
+public class PlayerEntity : MonoBehaviour {
 
-	public Color secretColor;
+	public Color playerColor = Color.black;
 
-
-	void Awake() {
-
+	void Awake(){
+		renderer.material.color = playerColor;
 	}
 	// Use this for initialization
 	void Start () {
-		this.renderer.material.color = secretColor;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
-
-
 }

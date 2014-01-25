@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject cleanerObject;
 	public GameObject gateSpawner;
-	public int gateSpawnInterval = 3;
+	public float gateSpawnInterval = 3;
 
 	public List<GameObject> gatePrefabs = new List<GameObject>(); 
 
@@ -15,16 +15,15 @@ public class GameController : MonoBehaviour {
 
 	public static Color[] gameColors = new Color[3];
 
+
 	// prototype time functions
 	float timer;
 
 
 	void Awake() {
-		Debug.Log ("I'm awake!");
 		gameColors[0] = Color.red;
 		gameColors[1] = Color.green;
 		gameColors[2] = Color.blue;
-
 		gateOrigin = gateSpawner.transform;
 	}
 	// Use this for initialization
@@ -41,8 +40,7 @@ public class GameController : MonoBehaviour {
 			SpawnGate();
 		}
 	}
-
-
+	
 	void SpawnGate() {
 		//currentGate = (GameObject)Instantiate(gatePrefabs[Random.Range(0,3)]);  // cut scope and ship it!!!!
 		currentGate = (GameObject)Instantiate(gatePrefabs[0]);

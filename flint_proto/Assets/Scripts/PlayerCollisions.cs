@@ -23,20 +23,16 @@ public class PlayerCollisions : MonoBehaviour {
 		//Destroy(gameObject);
 		*/
 
-		Debug.Log("Player Entity Collided with something!");
-
 		Portal portal = collider.gameObject.GetComponent<Portal>();
+		PlayerEntity player = this.gameObject.GetComponent<PlayerEntity>();
+		Color playerColor = player.playerColor;
+		Color portalColor = portal.secretColor;
 
-		if (portal.secretColor == Color.red){
-			Debug.Log ("red");
+		if (playerColor == portalColor){
+			Debug.Log ("SUCCESS!!!!");
 		}
-
-		if (portal.secretColor == Color.blue){
-			Debug.Log ("blue");
-		}
-
-		if (portal.secretColor == Color.green){
-			Debug.Log ("green");
+		else {
+			Debug.Log("FAIL!!!!");
 		}
 
 
