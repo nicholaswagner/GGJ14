@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour {
 	private GameObject currentGate;
 	private Transform gateOrigin;
 
-
+	public static Color[] gameColors = new Color[3];
 
 	// prototype time functions
 	float timer;
@@ -21,6 +21,10 @@ public class GameController : MonoBehaviour {
 
 	void Awake() {
 		Debug.Log ("I'm awake!");
+		gameColors[0] = Color.red;
+		gameColors[1] = Color.green;
+		gameColors[2] = Color.blue;
+
 		gateOrigin = gateSpawner.transform;
 	}
 	// Use this for initialization
@@ -43,5 +47,7 @@ public class GameController : MonoBehaviour {
 		//currentGate = (GameObject)Instantiate(gatePrefabs[Random.Range(0,3)]);  // cut scope and ship it!!!!
 		currentGate = (GameObject)Instantiate(gatePrefabs[0]);
 		currentGate.transform.position = gateOrigin.position;
+		//var gateController = (Portal)currentGate.GetComponent("Portal");
+		//currentGate.GetComponent.<PortalManager>().variable = 
 	}
 }
