@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject cleanerObject;
 	public GameObject gateSpawner;
+	public int gateSpawnInterval = 3;
 
 	public List<GameObject> gatePrefabs = new List<GameObject>(); 
 
@@ -13,8 +14,8 @@ public class GameController : MonoBehaviour {
 	private Transform gateOrigin;
 
 
+
 	// prototype time functions
-	float interval = 1f; //for 1 second
 	float timer;
 
 
@@ -24,7 +25,7 @@ public class GameController : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		timer = Time.time + interval;
+		timer = Time.time + gateSpawnInterval;
 		SpawnGate();
 	}
 	
@@ -32,7 +33,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		if(Time.time >= timer)
 		{
-			timer = Time.time + interval; //set the timer again
+			timer += gateSpawnInterval; //set the timer again
 			SpawnGate();
 		}
 	}
