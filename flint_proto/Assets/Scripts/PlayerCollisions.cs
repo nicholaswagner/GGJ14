@@ -13,7 +13,7 @@ public class PlayerCollisions : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider collider) {
+	void OnTriggerExit(Collider collider) {
 		/*
 		 * Finds the point of the collision event and makes an explosion!
 		ContactPoint contact = collision.contacts[0];
@@ -23,18 +23,29 @@ public class PlayerCollisions : MonoBehaviour {
 		//Destroy(gameObject);
 		*/
 
+		/*
+		Debug.Log("2");
 		Portal portal = collider.gameObject.GetComponent<Portal>();
+		Debug.Log("3");
 		PlayerEntity player = this.gameObject.GetComponent<PlayerEntity>();
-		Color playerColor = player.playerColor;
-		Color portalColor = portal.secretColor;
+		Debug.Log("4");
+		*/
+		//Color playerColor = player.playerColor;
 
+		//Color portalColor = portal.secretColor;
+		
+		/*Debug.Log("5");
 		if (playerColor == portalColor){
-			Debug.Log ("1");
-			Destroy(collider.gameObject);
+			//Destroy(collider.gameObject);
 		}
 		else {
 			//Debug.Log("FAIL!!!!");
-		}
+		}*/
+
+
+
+			
+		
 
 
 

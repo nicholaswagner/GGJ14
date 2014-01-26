@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Portal : MonoBehaviour {
 
-	public Color secretColor;
+	public Color secretColor = Color.black;
 
 
 	void Awake() {

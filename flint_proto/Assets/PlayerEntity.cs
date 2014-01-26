@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerEntity : MonoBehaviour {
 
-	public Color playerColor = Color.black;
+	public Color playerColor;
 	public int currentLane;
 
 	public KeyCode lane1;
@@ -14,12 +14,7 @@ public class PlayerEntity : MonoBehaviour {
 	public float smooth;
 
 	void Awake(){
-		Color color = new Color();
-		color.r = playerColor.r;
-		color.g = playerColor.g;
-		color.b = playerColor.b;
-		color.a = 0.5f;
-		renderer.material.color = color;
+		renderer.material.color = playerColor;
 
 	}
 	// Use this for initialization
