@@ -29,10 +29,11 @@ public class PlayerCollisions : MonoBehaviour {
 		Color portalColor = portal.secretColor;
 
 		if (playerColor == portalColor){
-			Debug.Log ("SUCCESS!!!!");
+			Debug.Log ("1");
+			Destroy(collider.gameObject);
 		}
 		else {
-			Debug.Log("FAIL!!!!");
+			//Debug.Log("FAIL!!!!");
 		}
 
 

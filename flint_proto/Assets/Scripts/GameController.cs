@@ -8,12 +8,22 @@ public class GameController : MonoBehaviour {
 	public GameObject gateSpawner;
 	public float gateSpawnInterval = 3;
 
-	public List<GameObject> gatePrefabs = new List<GameObject>(); 
+	public List<GameObject> gatePrefabs = new List<GameObject>();
+	//public List<GameObject> playerPositions = new List<GameObject>();
 
 	private GameObject currentGate;
 	private Transform gateOrigin;
 
 	public static Color[] gameColors = new Color[3];
+	public static Vector3[] lanePositions = new Vector3[3];
+
+	public GameObject Position1;
+	public GameObject Position2;
+	public GameObject Position3;
+	public GameObject Player1;
+	public GameObject Player2;
+	public GameObject Player3;
+
 
 
 	// prototype time functions
@@ -25,6 +35,14 @@ public class GameController : MonoBehaviour {
 		gameColors[1] = Color.green;
 		gameColors[2] = Color.blue;
 		gateOrigin = gateSpawner.transform;
+
+		lanePositions[0] = Position1.transform.position;
+		lanePositions[1] = Position2.transform.position;
+		lanePositions[2] = Position3.transform.position;
+
+		Player1.transform.position = Position1.transform.position;
+		Player2.transform.position = Position2.transform.position;
+		Player3.transform.position = Position3.transform.position;
 	}
 	// Use this for initialization
 	void Start () {
