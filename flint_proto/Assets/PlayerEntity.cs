@@ -13,8 +13,11 @@ public class PlayerEntity : MonoBehaviour {
 	private Vector3 newPosition;
 	public float smooth;
 
+
 	void Awake(){
 		renderer.material.color = playerColor;
+
+
 
 	}
 	// Use this for initialization
